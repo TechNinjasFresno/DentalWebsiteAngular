@@ -1,1 +1,123 @@
 /* You can add global styles to this file, and also import other style files */
+* {
+  margin: 0;
+  padding: 0;
+}
+html, body {
+  height: 100%;
+}
+body {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.wrapper {
+  flex: 1;
+}
+header {
+  width: 100%;
+  height: 50px;
+  padding-top: 10px;
+  background-color: #364156;
+  align-items: center;
+  display: inline-flex;
+  color: ghostwhite;
+}
+header img {
+  margin-left: 120px;
+  margin-right: 10px;
+  padding-bottom: 10px;
+  width: 35px;
+  height: auto;
+  border: 1px solid #011638;
+}
+footer {
+  width: 100%;
+  height: 60px;
+  background-color: #364156;
+  position: fixed;
+  bottom: 0;
+  text-align: center;
+  color: ghostwhite;
+}
+footer p {
+  padding: 15px;
+}
+.main-content {
+  width: 80%;
+  height: 70%;
+  margin: 4% auto;
+  position: auto;
+}
+.main-content-log {
+  width: 35%;
+  height: 50%;
+  background-color: #364156;
+  margin: 100px auto;
+  position: auto;
+  border-radius: 5%;
+}
+.login-layout {
+  align-items: center;
+  white-space: pre-line;
+  margin: .5em 0 0 3em;
+  font-size: 1.5em;
+  color: ghostwhite;
+}
+.main-content-log input {
+  width: 75%;
+  height: 40px;
+}
+.main-content-log button {
+  width: 75%;
+  height: 40px;
+  border-radius: 5%;
+  font-size: 20px;
+}
+.main-content-log button:hover {
+  background-color: teal;
+  font-style: italic;
+  font-weight: bold;
+}
+.main-content-pages {
+  width: 80%;
+  height: 65%;
+  background-color: #364156;
+  margin: 50px auto;
+  position: auto;
+  border-radius: 1%;
+}
+.nav-sidebar {
+  width: 25%;
+  height: 100%;
+  background-color: teal;
+  border-radius: 1% 0 0 1%;
+  float: left;
+}
+.sidebar-links {
+  list-style: none;
+  margin: 0 1em 0 1em;
+}
+.sidebar-links li {
+  padding: 10px;
+  background-color: #364156;
+}
+.sidebar-links a {
+  margin: 1em;
+  padding: 1em;
+  text-decoration: none;
+  color: ghostwhite;
+}
+.sidebar-links a:hover {
+  color: teal;
+  font-style: italic;
+  font-weight: bold;
+}
+.sidebar-links li:hover {
+  background-color: #2254b5;
+}
+.API-content {
+  float: left;
+  width: 67%;
+  padding: 2%;
+}
