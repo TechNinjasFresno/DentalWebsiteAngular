@@ -26,6 +26,7 @@ header {
 header img {
   margin-left: 120px;
   margin-right: 10px;
+  padding-bottom: 10px;
   width: 35px;
   height: auto;
   border: 1px solid #011638;
@@ -38,6 +39,9 @@ footer {
   bottom: 0;
   text-align: center;
   color: ghostwhite;
+}
+footer p {
+  padding: 15px;
 }
 .main-content {
   width: 80%;
