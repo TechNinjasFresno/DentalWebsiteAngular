@@ -7,9 +7,15 @@ import { RouterModule, Routes } from '@angular/router';
 import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
 import { EmployeesComponent } from './employees/employees.component';
+import { HomeComponent } from './home/home.component';
+import { EquipmentComponent } from './equipment/equipment.component';
+import { VendorsComponent } from './vendors/vendors.component';
 
 const appRoutes: Routes = [
+  { path: 'home', component: HomeComponent },
   { path: 'employees', component: EmployeesComponent },
+  { path: 'equipment', component: EquipmentComponent },
+  { path: 'vendors', component: VendorsComponent },
   { path: 'login', component: LoginComponent },
   { path: '', redirectTo: 'login', pathMatch: 'full' },
   { path: '**', redirectTo: 'login', pathMatch: 'full' }
@@ -19,7 +25,10 @@ const appRoutes: Routes = [
   declarations: [
     AppComponent,
     LoginComponent,
-    EmployeesComponent
+    EmployeesComponent,
+    HomeComponent,
+    EquipmentComponent,
+    VendorsComponent
   ],
   imports: [
     BrowserModule,
