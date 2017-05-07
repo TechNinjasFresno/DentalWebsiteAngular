@@ -66,10 +66,12 @@ footer p {
 }
 .main-content-log input {
   width: 75%;
-  height: 40px;
+  height: 35px;
+  font-size: 20px;
+  padding: 5px;
 }
 .main-content-log button {
-  width: 75%;
+  width: 80%;
   height: 40px;
   border-radius: 5%;
   font-size: 20px;
@@ -82,7 +84,6 @@ footer p {
 .main-content-pages {
   width: 80%;
   height: 65%;
-  background-color: #364156;
   margin: 50px auto;
   position: auto;
   border-radius: 1%;
@@ -120,4 +121,7 @@ footer p {
   float: left;
   width: 67%;
   padding: 2%;
+  background-color: #364156;
+  color: ghostwhite;
+  margin-bottom: 65px;
 }
