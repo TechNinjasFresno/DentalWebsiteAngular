@@ -10,6 +10,21 @@
         </ul>
     </aside>
     <div class="API-content">
-      <p>EMPLOYEES TEXT GOES HERE!!!</p>
+      <table *ngIf='employees && employees.length'>
+        <thead>
+          <tr>
+            <th>Employee ID</th>
+            <th>Name</th>
+            <th>Admin</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor='let employee of employees'>
+            <td>{{ employee._id }}</td>
+            <td>{{ employee.name }}</td>
+            <td>{{ employee.admin }}</td>
+          </tr>
+        </tbody>
+      </table>
     </div>
 </section>

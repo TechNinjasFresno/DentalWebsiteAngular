@@ -43,6 +43,19 @@ footer {
 footer p {
   padding: 15px;
 }
+table {
+    width: 100%;
+}
+th{
+    padding: 22px;
+    border: solid black 1px;
+    color: teal;
+    font-size: 20px;
+}
+td {
+    padding: 22px;
+    border: solid black 1px;
+}
 .main-content {
   width: 80%;
   height: 70%;
@@ -66,8 +79,8 @@ footer p {
 }
 .main-content-log input {
   width: 75%;
-  height: 35px;
-  font-size: 20px;
+  height: 25px;
+  font-size: 18px;
   padding: 5px;
 }
 .main-content-log button {
@@ -124,4 +137,5 @@ footer p {
   background-color: #364156;
   color: ghostwhite;
   margin-bottom: 65px;
+  border-radius: 0 1% 1% 0;
 }

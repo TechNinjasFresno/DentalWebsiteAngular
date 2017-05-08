@@ -22,19 +22,19 @@ const appRoutes: Routes = [
 ]
 
 @NgModule({
-  declarations: [
+  imports: [
+    BrowserModule,
+    FormsModule,
+    HttpModule,
+    RouterModule.forRoot(appRoutes)
+  ],
+    declarations: [
     AppComponent,
     LoginComponent,
     EmployeesComponent,
     HomeComponent,
     EquipmentComponent,
     VendorsComponent
-  ],
-  imports: [
-    BrowserModule,
-    FormsModule,
-    HttpModule,
-    RouterModule.forRoot(appRoutes)
   ],
   providers: [],
   bootstrap: [AppComponent]
