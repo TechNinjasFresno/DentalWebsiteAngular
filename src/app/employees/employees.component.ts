@@ -13,13 +13,16 @@ import { EmployeesService } from './employees.service';
 @Injectable()
 
 export class EmployeesComponent implements OnInit {
+  errorMessage: string;
 
-  employees: IEmployees[] = [];
+  employees: IEmployees[];
  
   constructor(private _employeesService: EmployeesService){
 
   }
-  ngOnInit() {
-    this.employees = this._employeesService.getEmployees();
+  ngOnInit(): void {
+    this._employeesService.getEmployees()
+    .subscribe(employees => this.employees = employees,
+        error => this.errorMessage = <any>error);
   }
 }

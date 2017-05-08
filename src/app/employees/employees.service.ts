@@ -1,36 +1,28 @@
 import { Injectable } from '@angular/core';
+import { Http, Response } from '@angular/http';
+import { Observable } from 'rxjs/Observable';
+import 'rxjs/add/operator/map';
+import 'rxjs/add/operator/do';
+import 'rxjs/add/operator/catch';
 
-import { IEmployees } from './employees.interface'
+import { IEmployees } from './employees.interface';
 
 @Injectable()
 export class EmployeesService {
+  private _employeesUrl = 'http://localhost:8000/api/employees';
 
-    getEmployees(): IEmployees[] {
-        return[
-  {
-    "_id": "590e3b59311d8701a0fcf866",
-    "name": "Allen",
-    "password": "password007",
-    "admin": true
-  },
-  {
-    "_id": "590e3c50311d8701a0fcf868",
-    "name": "Eric",
-    "password": "password789",
-    "admin": false
-  },
-  {
-    "_id": "590e3c3e311d8701a0fcf867",
-    "name": "Kevin",
-    "password": "password456",
-    "admin": false
-  },
-  {
-    "_id": "590e3c5e311d8701a0fcf869",
-    "name": "Taylor",
-    "password": "password123",
-    "admin": true
-  }
-];
+  constructor(private _http: Http){}
+
+    getEmployees(): Observable<IEmployees[]> {
+        return this._http.get(this._employeesUrl)
+          .map((response: Response) => <IEmployees[]> response.json())
+          .do(data => console.log('All: ' + JSON.stringify(data)))
+          .catch(this.handleError);
     }
+
+private handleError(error: Response) {
+  console.error(error);
+  return Observable.throw(error.json().error || 'Server error');
+}
+
 }
