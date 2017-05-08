@@ -10,6 +10,7 @@
         </ul>
     </aside>
     <div class="API-content">
+      <h2>Equipment</h2><br>
       <table *ngIf='equipment && equipment.length'>
         <thead>
           <tr>
@@ -23,7 +24,7 @@
           <tr *ngFor='let equipment of equipment'>
             <td>{{ equipment.serialNum }}</td>
             <td>{{ equipment.cost | currency:'USD':true:'1.2-2' }}</td>
-            <td>{{ equipment.purchaseDate | date:'mm/dd/yyyy' }}</td>
+            <td>{{ equipment.purchaseDate | date:'MMMM dd, yyyy' }}</td>
             <td>{{ equipment.warrantyLength }}</td>
           </tr>
         </tbody>
