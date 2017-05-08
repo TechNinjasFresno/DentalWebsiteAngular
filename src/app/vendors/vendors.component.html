@@ -10,6 +10,25 @@
         </ul>
     </aside>
     <div class="API-content">
-      <p>VENDORS TEXT GOES HERE!!!</p>
+      <table *ngIf='vendors && vendors.length'>
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Address</th>
+            <th>Phone</th>
+            <th>Account Number</th>
+            <th>Direct Order</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor='let vendor of vendors'>
+            <td>{{ vendor.vendorName }}</td>
+            <td>{{ vendor.address }}</td>
+            <td>{{ vendor.phone }}</td>
+            <td>{{ vendor.accountNum }}</td>
+            <td>{{ vendor.hasDirectOrder }}</td>
+          </tr>
+        </tbody>
+      </table>
     </div>
 </section>
