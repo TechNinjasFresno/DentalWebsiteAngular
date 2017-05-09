@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { RouterModule, Routes } from '@angular/router';
 
@@ -10,10 +10,12 @@ import { EmployeesComponent } from './employees/employees.component';
 import { HomeComponent } from './home/home.component';
 import { EquipmentComponent } from './equipment/equipment.component';
 import { VendorsComponent } from './vendors/vendors.component';
+import { EmployeesFormComponent } from './employees-form/employees-form.component';
 
 const appRoutes: Routes = [
   { path: 'home', component: HomeComponent },
   { path: 'employees', component: EmployeesComponent },
+  { path: 'employee', component: EmployeesFormComponent },
   { path: 'equipment', component: EquipmentComponent },
   { path: 'vendors', component: VendorsComponent },
   { path: 'login', component: LoginComponent },
@@ -25,6 +27,7 @@ const appRoutes: Routes = [
   imports: [
     BrowserModule,
     FormsModule,
+    ReactiveFormsModule,
     HttpModule,
     RouterModule.forRoot(appRoutes)
   ],
@@ -34,7 +37,8 @@ const appRoutes: Routes = [
     EmployeesComponent,
     HomeComponent,
     EquipmentComponent,
-    VendorsComponent
+    VendorsComponent,
+    EmployeesFormComponent
   ],
   providers: [],
   bootstrap: [AppComponent]
