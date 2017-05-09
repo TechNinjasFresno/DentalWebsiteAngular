@@ -19,8 +19,8 @@ const appRoutes: Routes = [
   { path: 'equipment', component: EquipmentComponent },
   { path: 'vendors', component: VendorsComponent },
   { path: 'login', component: LoginComponent },
-  { path: '', redirectTo: 'login', pathMatch: 'full' },
-  { path: '**', redirectTo: 'login', pathMatch: 'full' }
+  { path: '', redirectTo: 'home', pathMatch: 'full' },
+  { path: '**', redirectTo: 'home', pathMatch: 'full' }
 ]
 
 @NgModule({
