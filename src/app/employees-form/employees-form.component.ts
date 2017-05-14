@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl } from '@angular/forms';
 
-import { Employee } from './employee.service';
+import { Employee } from './employee.interface';
 
 @Component({
   selector: 'app-employees-form',
@@ -12,12 +12,13 @@ export class EmployeesFormComponent implements OnInit {
 
   constructor() { }
     employeeForm: FormGroup;
-    employee: Employee= new Employee();
+    employee: Employee = new Employee();
 
    ngOnInit(): void {
       this.employeeForm = new FormGroup({
         name: new FormControl(),
-        admin: new FormControl()
+        password: new FormControl(),
+        admin: new FormControl(false)
       });
     }
 

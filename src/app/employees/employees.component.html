@@ -10,7 +10,8 @@
         </ul>
     </aside>
     <div class="API-content">
-      <h2>Employees</h2><br>
+      <h2>Employees</h2>
+      <button class="add-new"><a [routerLink]="['/employee']">Add Employee</a></button><br>
       <table *ngIf='employees && employees.length'>
         <thead>
           <tr>

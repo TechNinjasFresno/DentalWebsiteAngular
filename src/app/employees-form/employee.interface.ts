@@ -1,7 +1,7 @@
 export class Employee {
 
     constructor(
-        public _id = '',
         public name = '',
-        public admin = '') { }
+        public password = '',
+        public admin = false) { }
 }

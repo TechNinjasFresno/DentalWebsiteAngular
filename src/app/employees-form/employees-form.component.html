@@ -1,3 +1,45 @@
-<p>
-  employees-form works!
-</p>
+<article class="new-form">
+	<form class="new-submission"
+			  novalidate
+		 	  (ngSubmit)="save()"
+			  [formGroup]="employeeForm">
+				<div
+					[ngClass]="{'has-error': (employeeForm.get('name').touched || employeeForm.get('name').dirty) && !employeeForm.get('name').valid}">
+						<label><b>Employee Name:</b></label>
+							<input class=""
+										 id="ename" 
+									 	 type="text"
+										 placeholder=" Enter Employee Name"
+										 required
+										 formControlName="name"/>
+				</div>
+				<div
+					[ngClass]="{'has-error': (employeeForm.get('password').touched || employeeForm.get('password').dirty) && !employeeForm.get('password').valid}">
+						<label><b>Password:</b></label>
+							<input class=""
+										 type="password"
+										 placeholder=" Enter Password"
+									 	 id="epswd"
+										 required
+										 formControlName="password"/>
+				</div>
+				<div class="admin-box">
+						<label><b>Admin:</b></label>
+						<input class=""
+									 type="checkbox"
+									 id="isadmin"
+									 required
+									 formControlName="admin"/>
+				</div>
+				<div>
+						<button class=""
+										type="submit"
+										[disabled]="!employeeForm.valid">
+							Save</button>
+				</div>
+	</form>
+<br>Dirty: {{ employeeForm.dirty }}
+<br>Touched: {{ employeeForm.touched }}
+<br>Valid: {{ employeeForm.valid }}
+<br>Value: {{ employeeForm.value | json }}
+</article>

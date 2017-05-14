@@ -1,0 +1,26 @@
+.new-form {
+  width: 35%;
+  height: 50%;
+  background-color: #364156;
+  margin: 100px auto;
+  position: auto;
+  border-radius: 5%;
+}
+.new-submission {
+  align-items: center;
+  white-space: pre-line;
+  margin: .5em 0 0 3em;
+  font-size: 1em;
+  color: ghostwhite;
+}
+.new-submission input {
+    width: 75%;
+}
+.admin-box {
+    width: 25%;
+    display: inline-flex;
+}
+.new-submission button {
+    width: 75%;
+    text-align: auto;
+}

@@ -5,12 +5,13 @@ import { HttpModule } from '@angular/http';
 import { RouterModule, Routes } from '@angular/router';
 
 import { AppComponent } from './app.component';
-import { LoginComponent } from './login/login.component';
-import { EmployeesComponent } from './employees/employees.component';
-import { HomeComponent } from './home/home.component';
-import { EquipmentComponent } from './equipment/equipment.component';
-import { VendorsComponent } from './vendors/vendors.component';
 import { EmployeesFormComponent } from './employees-form/employees-form.component';
+import { EmployeesComponent } from './employees/employees.component';
+import { EquipmentComponent } from './equipment/equipment.component';
+import { HomeComponent } from './home/home.component';
+import { LoginComponent } from './login/login.component';
+import { VendorsComponent } from './vendors/vendors.component';
+
 
 const appRoutes: Routes = [
   { path: 'home', component: HomeComponent },
@@ -27,18 +28,19 @@ const appRoutes: Routes = [
   imports: [
     BrowserModule,
     FormsModule,
-    ReactiveFormsModule,
     HttpModule,
+    ReactiveFormsModule,
     RouterModule.forRoot(appRoutes)
   ],
     declarations: [
     AppComponent,
-    LoginComponent,
+    EmployeesFormComponent,
     EmployeesComponent,
-    HomeComponent,
     EquipmentComponent,
-    VendorsComponent,
-    EmployeesFormComponent
+    HomeComponent,
+    LoginComponent,
+    VendorsComponent
+    
   ],
   providers: [],
   bootstrap: [AppComponent]
