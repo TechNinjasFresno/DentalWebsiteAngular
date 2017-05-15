@@ -1,5 +1,5 @@
 export interface IEmployees {   
-    "_id": string;
+    "_id": number;
     "name": string;
     "password": string;
     "admin": boolean;

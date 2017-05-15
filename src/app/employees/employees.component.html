@@ -11,20 +11,21 @@
     </aside>
     <div class="API-content">
       <h2>Employees</h2>
-      <button class="add-new"><a [routerLink]="['/employee']">Add Employee</a></button><br>
+      <button class="add-new"><a [routerLink]="['/employee-add']">Add Employee</a></button><br>
       <table *ngIf='employees && employees.length'>
         <thead>
           <tr>
-            <th>Employee ID</th>
             <th>Name</th>
             <th>Admin</th>
+            <th>Employee ID</th>
           </tr>
         </thead>
         <tbody>
           <tr *ngFor='let employee of employees'>
-            <td>{{ employee._id }}</td>
-            <td>{{ employee.name }}</td>
+            <td><a [routerLink]="['/employee', employee._id]">
+              {{ employee.name }}</a></td>
             <td>{{ employee.admin }}</td>
+            <td>{{ employee._id }}</td>
           </tr>
         </tbody>
       </table>

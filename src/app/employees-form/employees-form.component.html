@@ -1,8 +1,9 @@
 <article class="new-form">
 	<form class="new-submission"
 			  novalidate
-		 	  (ngSubmit)="save()"
+		 	  (ngSubmit)="saveEmployee()"
 			  [formGroup]="employeeForm">
+			  	<h2>Add Employee</h2>
 				<div
 					[ngClass]="{'has-error': (employeeForm.get('name').touched || employeeForm.get('name').dirty) && !employeeForm.get('name').valid}">
 						<label><b>Employee Name:</b></label>
@@ -28,18 +29,18 @@
 						<input class=""
 									 type="checkbox"
 									 id="isadmin"
-									 required
 									 formControlName="admin"/>
 				</div>
 				<div>
 						<button class=""
-										type="submit"
-										[disabled]="!employeeForm.valid">
+								type="submit"
+								[disabled]="!employeeForm.valid">
 							Save</button>
+						<button class=""
+								type="reset">
+						Cancel</button>
+						<button >
+						<a [routerLink]="['/employees']">Back</a></button>
 				</div>
 	</form>
-<br>Dirty: {{ employeeForm.dirty }}
-<br>Touched: {{ employeeForm.touched }}
-<br>Valid: {{ employeeForm.valid }}
-<br>Value: {{ employeeForm.value | json }}
 </article>

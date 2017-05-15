@@ -5,6 +5,9 @@
     float: right;
     background-color: green;
 }
+ .API-content a {
+    color: ghostwhite;
+}
 .add-new a {
     text-decoration: none;
 }
